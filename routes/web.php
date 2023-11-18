@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EntrenadoresController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// Rutas para apis 
+Route::apiResource('apiEntrenador', EntrenadoresController::class);
+
+// Rutas de vistas 
+Route::view('entrenadores', 'Entrenadores/entrenadores');
